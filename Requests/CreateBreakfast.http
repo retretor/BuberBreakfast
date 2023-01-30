@@ -1,0 +1,16 @@
+﻿POST http://localhost:5288/breakfast
+Content-Type: application/json
+
+{
+  "name": "Vegan",
+  "description": "Vegan description",
+  "startDateTime": "2022-04-08T00:00:00",
+  "endDateTime": "2022-04-08T00:00:00",
+  "savory": [
+    "milk",
+    "avocado"
+  ],
+  "Sweet": [
+    "Cookie"
+  ]
+}

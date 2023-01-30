@@ -1,0 +1,19 @@
+﻿< {%
+    request.variables.set("id", "aa5b9212-23be-45d8-8d51-02a0a00c8a4e")
+%}
+PUT http://localhost:5288/breakfast/{{id}}
+Content-Type: application/json
+
+{
+  "name": "Vegan updated",
+  "description": "Vegan description updated",
+  "startDateTime": "2022-04-08T00:00:00",
+  "endDateTime": "2022-04-08T00:00:00",
+  "savory": [
+    "milk",
+    "avocado"
+  ],
+  "Sweet": [
+    "Cookie"
+  ]
+}

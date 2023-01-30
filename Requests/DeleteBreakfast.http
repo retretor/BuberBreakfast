@@ -1,0 +1,4 @@
+﻿< {%
+    request.variables.set("id", "340fc451-7049-4679-b62e-f82793483fed")
+%}
+DELETE http://localhost:5288/breakfast/{{id}}
