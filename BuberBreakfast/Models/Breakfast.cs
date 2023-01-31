@@ -6,14 +6,14 @@ namespace BuberBreakfast.Models;
 public class Breakfast
 {
     [Key]
-    public Guid Id;
-    public string Name;
-    public string Description;
-    public DateTime StartDateTime;
-    public DateTime EndDateTime;
-    public DateTime LastModifiedDateTime;
-    public readonly List<string> Savory;
-    public readonly List<string> Sweet;
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public DateTime StartDateTime { get; set; }
+    public DateTime EndDateTime { get; set; }
+    public DateTime LastModifiedDateTime { get; set; }
+    public List<string> Savory { get; set; }
+    public List<string> Sweet { get; set; }
 
     public Breakfast(
         Guid id,

@@ -40,7 +40,8 @@ public class DbRepository
     
     public List<Breakfast> GetBreakfasts()
     {
-        return _context.Breakfasts.ToList();
+        var breakfasts = _context.Breakfasts.ToList();
+        return breakfasts;
     }
     
     public void ClearBreakfasts()

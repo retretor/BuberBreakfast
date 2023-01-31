@@ -13,8 +13,4 @@ public class BreakfastContext : DbContext
     {
         optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=BreakfastDb;Trusted_Connection=True;");
     }
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<Breakfast>().HasKey(b => b.Id);
-    }
 }
