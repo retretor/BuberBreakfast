@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Files\\Programing\\C#\\BuberBreakfast\\BuberBreakfast\\BuberBreakfast.csproj": {}
+    "D:\\Proggraming\\C# code\\BuberBreakfast\\BuberBreakfast\\BuberBreakfast.csproj": {}
   },
   "projects": {
-    "C:\\Files\\Programing\\C#\\BuberBreakfast\\BuberBreakfast.Contracts\\BuberBreakfast.Contracts.csproj": {
+    "D:\\Proggraming\\C# code\\BuberBreakfast\\BuberBreakfast.Contracts\\BuberBreakfast.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Files\\Programing\\C#\\BuberBreakfast\\BuberBreakfast.Contracts\\BuberBreakfast.Contracts.csproj",
+        "projectUniqueName": "D:\\Proggraming\\C# code\\BuberBreakfast\\BuberBreakfast.Contracts\\BuberBreakfast.Contracts.csproj",
         "projectName": "BuberBreakfast.Contracts",
-        "projectPath": "C:\\Files\\Programing\\C#\\BuberBreakfast\\BuberBreakfast.Contracts\\BuberBreakfast.Contracts.csproj",
-        "packagesPath": "C:\\Users\\retretor\\.nuget\\packages\\",
-        "outputPath": "C:\\Files\\Programing\\C#\\BuberBreakfast\\BuberBreakfast.Contracts\\obj\\",
+        "projectPath": "D:\\Proggraming\\C# code\\BuberBreakfast\\BuberBreakfast.Contracts\\BuberBreakfast.Contracts.csproj",
+        "packagesPath": "D:\\Users\\retretor\\.nuget\\packages\\",
+        "outputPath": "D:\\Proggraming\\C# code\\BuberBreakfast\\BuberBreakfast.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\retretor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "D:\\Users\\retretor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -59,24 +59,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Files\\Programing\\C#\\BuberBreakfast\\BuberBreakfast\\BuberBreakfast.csproj": {
+    "D:\\Proggraming\\C# code\\BuberBreakfast\\BuberBreakfast\\BuberBreakfast.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Files\\Programing\\C#\\BuberBreakfast\\BuberBreakfast\\BuberBreakfast.csproj",
+        "projectUniqueName": "D:\\Proggraming\\C# code\\BuberBreakfast\\BuberBreakfast\\BuberBreakfast.csproj",
         "projectName": "BuberBreakfast",
-        "projectPath": "C:\\Files\\Programing\\C#\\BuberBreakfast\\BuberBreakfast\\BuberBreakfast.csproj",
-        "packagesPath": "C:\\Users\\retretor\\.nuget\\packages\\",
-        "outputPath": "C:\\Files\\Programing\\C#\\BuberBreakfast\\BuberBreakfast\\obj\\",
+        "projectPath": "D:\\Proggraming\\C# code\\BuberBreakfast\\BuberBreakfast\\BuberBreakfast.csproj",
+        "packagesPath": "D:\\Users\\retretor\\.nuget\\packages\\",
+        "outputPath": "D:\\Proggraming\\C# code\\BuberBreakfast\\BuberBreakfast\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\retretor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "D:\\Users\\retretor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -91,8 +91,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Files\\Programing\\C#\\BuberBreakfast\\BuberBreakfast.Contracts\\BuberBreakfast.Contracts.csproj": {
-                "projectPath": "C:\\Files\\Programing\\C#\\BuberBreakfast\\BuberBreakfast.Contracts\\BuberBreakfast.Contracts.csproj"
+              "D:\\Proggraming\\C# code\\BuberBreakfast\\BuberBreakfast.Contracts\\BuberBreakfast.Contracts.csproj": {
+                "projectPath": "D:\\Proggraming\\C# code\\BuberBreakfast\\BuberBreakfast.Contracts\\BuberBreakfast.Contracts.csproj"
               }
             }
           }
@@ -110,6 +110,30 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -135,7 +159,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

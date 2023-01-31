@@ -9,4 +9,6 @@ public interface IBreakfastService
     Breakfast? GetBreakfast(Guid id);
     Breakfast? UpsertBreakfast(Guid id, UpsertBreakfastRequest request);
     void DeleteBreakfast(Guid id);
+    List<Breakfast> GetBreakfasts();
+    void ClearBreakfasts();
 }

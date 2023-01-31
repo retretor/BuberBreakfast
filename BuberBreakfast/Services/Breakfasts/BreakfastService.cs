@@ -1,24 +1,25 @@
 ﻿using BuberBreakfast.Contracts.Breakfast;
+using BuberBreakfast.DataBase;
 using BuberBreakfast.Models;
 
 namespace BuberBreakfast.Services.Breakfasts;
 
 public class BreakfastService : IBreakfastService
 {
-    private static readonly Dictionary<Guid, Breakfast> Breakfasts = new Dictionary<Guid, Breakfast>();
+    private static readonly DbRepository DbRepository = new DbRepository();
     public void CreateBreakfast(Breakfast breakfast)
     {
-        Breakfasts.Add(breakfast.Id, breakfast);
+        DbRepository.SaveBreakfast(breakfast);
     }
 
     public Breakfast? GetBreakfast(Guid id)
     {
-        return Breakfasts.TryGetValue(id, out var breakfast) ? breakfast : null;
+        return DbRepository.GetBreakfasts().Find(b => b.Id == id);
     }
 
     public Breakfast? UpsertBreakfast(Guid id, UpsertBreakfastRequest request)
     {
-        if (!Breakfasts.ContainsKey(id)) return null;
+        if (DbRepository.GetBreakfasts().All(b => b.Id != id)) return null;
         var newBreakfast = new Breakfast(
             id,
             request.Name,
@@ -28,13 +29,21 @@ public class BreakfastService : IBreakfastService
             DateTime.UtcNow,
             request.Savory,
             request.Sweet);
-        Breakfasts[id] = newBreakfast;
+        DbRepository.UpdateBreakfast(GetBreakfast(id)!, newBreakfast);
         return newBreakfast;
-
     }
 
     public void DeleteBreakfast(Guid id)
     {
-        Breakfasts.Remove(id);
+        DbRepository.DeleteBreakfast(id);
+    }
+    public void ClearBreakfasts()
+    {
+        DbRepository.ClearBreakfasts();
+    }
+
+    public List<Breakfast> GetBreakfasts()
+    {
+        return DbRepository.GetBreakfasts();
     }
 }

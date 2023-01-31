@@ -1,18 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace BuberBreakfast.Models;
 
 public class Breakfast
 {
     [Key]
-    public Guid Id { get; }
-    public string Name { get; }
-    public string Description { get; }
-    public DateTime StartDateTime { get; }
-    public DateTime EndDateTime { get; }
-    public DateTime LastModifiedDateTime { get; }
-    public List<string> Savory { get; }
-    public List<string> Sweet { get; }
+    public Guid Id;
+    public string Name;
+    public string Description;
+    public DateTime StartDateTime;
+    public DateTime EndDateTime;
+    public DateTime LastModifiedDateTime;
+    public readonly List<string> Savory;
+    public readonly List<string> Sweet;
 
     public Breakfast(
         Guid id,
@@ -33,4 +34,21 @@ public class Breakfast
         Savory = savory;
         Sweet = sweet;
     }
+
+    public Breakfast()
+    {
+        Console.WriteLine("Creating new empty breakfast");
+    }
+    // public Breakfast()
+    // {
+    //     Console.WriteLine("Creating new empty breakfast");
+    //     Id = Guid.NewGuid();
+    //     Name = "";
+    //     Description = "";
+    //     StartDateTime = DateTime.UtcNow;
+    //     EndDateTime = DateTime.UtcNow;
+    //     LastModifiedDateTime = DateTime.UtcNow;
+    //     Savory = new List<string>();
+    //     Sweet = new List<string>();
+    // }
 }

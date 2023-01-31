@@ -70,6 +70,14 @@ public class BreakfastController : ControllerBase
         return NoContent();
     }
     
+    [HttpGet]
+    public IActionResult GetBreakfasts()
+    {
+        var breakfasts = _breakfastService.GetBreakfasts();
+        var response = breakfasts.Select(MapBreakfastResponse);
+        return Ok(response);
+    }
+    
     private static BreakfastResponse MapBreakfastResponse(Breakfast breakfast)
     {
         var response = new BreakfastResponse(
@@ -82,5 +90,12 @@ public class BreakfastController : ControllerBase
             breakfast.Savory,
             breakfast.Sweet);
         return response;
+    }
+
+    [HttpDelete]
+    public IActionResult ClearBreakfasts()
+    {
+        _breakfastService.ClearBreakfasts();
+        return NoContent();
     }
 }
