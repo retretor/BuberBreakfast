@@ -19,6 +19,8 @@ public class BreakfastController : ControllerBase
     [HttpPost]
     public IActionResult CreateBreakfast(CreateBreakfastRequest request)
     {
+        var savory = request.Savory.Select(s => new Savory { Name = s }).ToList();
+        var sweet = request.Sweet.Select(s => new Sweet { Name = s }).ToList();
         var breakfast = new Breakfast(
             Guid.NewGuid(),
             request.Name,
@@ -26,8 +28,8 @@ public class BreakfastController : ControllerBase
             request.StartDateTime,
             request.EndDateTime,
             DateTime.UtcNow,
-            request.Savory,
-            request.Sweet);
+            savory,
+            sweet);
         
         _breakfastService.CreateBreakfast(breakfast);
         
@@ -87,8 +89,8 @@ public class BreakfastController : ControllerBase
             breakfast.StartDateTime,
             breakfast.EndDateTime,
             breakfast.LastModifiedDateTime,
-            breakfast.Savory,
-            breakfast.Sweet);
+            breakfast.Savories.Select(s => s.Name).ToList(),
+            breakfast.Sweets.Select(s => s.Name).ToList());
         return response;
     }
 

@@ -14,12 +14,16 @@ public class BreakfastService : IBreakfastService
 
     public Breakfast? GetBreakfast(Guid id)
     {
-        return DbRepository.GetBreakfasts().Find(b => b.Id == id);
+        var breakfast = DbRepository.GetBreakfast(id);
+        
+        return breakfast;
     }
 
     public Breakfast? UpsertBreakfast(Guid id, UpsertBreakfastRequest request)
     {
         if (DbRepository.GetBreakfasts().All(b => b.Id != id)) return null;
+        var savory = request.Savory.Select(s => new Savory { Name = s }).ToList();
+        var sweet = request.Sweet.Select(s => new Sweet { Name = s }).ToList();
         var newBreakfast = new Breakfast(
             id,
             request.Name,
@@ -27,8 +31,8 @@ public class BreakfastService : IBreakfastService
             request.StartDateTime,
             request.EndDateTime,
             DateTime.UtcNow,
-            request.Savory,
-            request.Sweet);
+            savory,
+            sweet);
         DbRepository.UpdateBreakfast(GetBreakfast(id)!, newBreakfast);
         return newBreakfast;
     }

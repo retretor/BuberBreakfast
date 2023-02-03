@@ -6,4 +6,11 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="MySQL.Data.Entities" Version="6.8.3" />
+      <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.0" />
+      <PackageReference Include="MySqlConnector" Version="2.3.0-beta.1" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    </ItemGroup>
+
 </Project>

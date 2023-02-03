@@ -12,8 +12,8 @@ public class Breakfast
     public DateTime StartDateTime { get; set; }
     public DateTime EndDateTime { get; set; }
     public DateTime LastModifiedDateTime { get; set; }
-    public List<string> Savory { get; set; }
-    public List<string> Sweet { get; set; }
+    public List<Savory> Savories { get; set; }
+    public List<Sweet> Sweets { get; set; }
 
     public Breakfast(
         Guid id,
@@ -22,8 +22,8 @@ public class Breakfast
         DateTime startDateTime,
         DateTime endDateTime, 
         DateTime lastModifiedDateTime,
-        List<string> savory,
-        List<string> sweet)
+        List<Savory> savory,
+        List<Sweet> sweet)
     {
         Id = id;
         Name = name;
@@ -31,24 +31,12 @@ public class Breakfast
         StartDateTime = startDateTime;
         EndDateTime = endDateTime;
         LastModifiedDateTime = lastModifiedDateTime;
-        Savory = savory;
-        Sweet = sweet;
+        Savories = savory;
+        Sweets = sweet;
     }
 
     public Breakfast()
     {
-        Console.WriteLine("Creating new empty breakfast");
+        Console.WriteLine("Creating new breakfast");
     }
-    // public Breakfast()
-    // {
-    //     Console.WriteLine("Creating new empty breakfast");
-    //     Id = Guid.NewGuid();
-    //     Name = "";
-    //     Description = "";
-    //     StartDateTime = DateTime.UtcNow;
-    //     EndDateTime = DateTime.UtcNow;
-    //     LastModifiedDateTime = DateTime.UtcNow;
-    //     Savory = new List<string>();
-    //     Sweet = new List<string>();
-    // }
 }
